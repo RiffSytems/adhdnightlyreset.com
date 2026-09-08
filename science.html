@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Nightly Reset — The Science</title>
+<meta content="A refined science page for Nightly Reset, focused on the most interesting research behind unfinished thoughts, cognitive offloading and sleep." name="description"/>
+<link href="https://adhdnightlyreset.com/science.html" rel="canonical"/>
+<meta content="Nightly Reset — The Science" property="og:title"/>
+<meta content="A refined science page for Nightly Reset, focused on the most interesting research behind unfinished thoughts, cognitive offloading and sleep." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://adhdnightlyreset.com/science.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Nightly Reset — The Science" name="twitter:title"/>
+<meta content="A refined science page for Nightly Reset, focused on the most interesting research behind unfinished thoughts, cognitive offloading and sleep." name="twitter:description"/>
+<style>
+  :root {
+    --bg: #010103;
+    --bg-2: #040408;
+    --panel: rgba(6, 5, 10, 0.96);
+    --panel-2: rgba(8, 6, 14, 0.97);
+    --text: #f7f1f7;
+    --muted: #ccb8ca;
+    --soft: #9b8798;
+    --pink: #ff3d98;
+    --pink-2: #ff67b4;
+    --pink-soft: rgba(255, 61, 152, 0.12);
+    --border: rgba(255, 91, 173, 0.18);
+    --line: rgba(255,255,255,0.08);
+    --shadow: 0 24px 60px rgba(0,0,0,0.42);
+    --radius: 24px;
+    --max: 1120px;
+    --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--text);
+    background:
+      radial-gradient(circle at 82% 12%, rgba(255,61,152,0.10), transparent 20%),
+      radial-gradient(circle at 14% 0%, rgba(255,61,152,0.08), transparent 18%),
+      linear-gradient(180deg, #010103 0%, #020204 45%, #040407 100%);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: #ffd8eb; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(1, 1, 3, 0.9);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    min-width: 0;
+  }
+
+  .brain {
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255,103,180,0.25);
+    background: linear-gradient(180deg, rgba(255,61,152,0.13), rgba(255,61,152,0.05));
+    box-shadow: 0 0 24px rgba(255,61,152,0.12), inset 0 1px 0 rgba(255,255,255,0.08);
+    flex: 0 0 auto;
+  }
+  .brain svg { width: 32px; height: 32px; color: var(--pink-2); filter: drop-shadow(0 0 8px rgba(255,61,152,0.42)); }
+
+  .brand-name { font-size: 1.95rem; font-weight: 760; line-height: 1; letter-spacing: -0.05em; }
+  .brand-sub { margin-top: 0.2rem; color: var(--pink-2); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 780; }
+
+  .navlinks {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .navlinks a {
+    color: rgba(255,255,255,0.88);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .navlinks a:hover { color: var(--pink-2); text-decoration: none; }
+
+  main { padding: 2.1rem 0 4.2rem; }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .nav-print {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: rgba(255,255,255,0.88);
+    font: inherit;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+
+  .nav-print:hover,
+  .nav-print:focus-visible {
+    color: var(--pink-2);
+  }
+
+  .nav-print:focus-visible {
+    outline: 2px solid rgba(255,103,180,0.7);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  .science-language-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px;
+    border: 1px solid rgba(255,103,180,0.20);
+    border-radius: 999px;
+    background: rgba(255,61,152,0.045);
+    flex: 0 0 auto;
+  }
+
+  .science-language-toggle button {
+    appearance: none;
+    min-width: 34px;
+    min-height: 30px;
+    padding: 0.25rem 0.48rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--soft);
+    font: inherit;
+    font-size: 0.70rem;
+    font-weight: 820;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+  }
+
+  .science-language-toggle button[aria-pressed="true"] {
+    color: #260714;
+    background: linear-gradient(180deg, #ff8ac9, var(--pink));
+    box-shadow: 0 0 14px rgba(255,61,152,0.22);
+  }
+
+  @media (max-width: 780px) {
+    .nav {
+      align-items: center;
+    }
+
+    .nav-actions {
+      gap: 0.55rem;
+    }
+
+    .navlinks {
+      display: none;
+    }
+
+    .science-language-toggle {
+      display: inline-flex;
+    }
+  }
+
+
+  .card,
+  .hero,
+  .study,
+  .print-band,
+  .closing {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(7, 6, 12, 0.97), rgba(4, 4, 8, 0.985));
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before,
+  .study::before,
+  .print-band::before,
+  .closing::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0, var(--pink) 14%, var(--pink-2) 50%, var(--pink) 86%, transparent 100%);
+    opacity: 0.9;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 0;
+    margin-bottom: 1.35rem;
+  }
+
+  .hero-copy { padding: 2rem 2rem 1.9rem; }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.42rem 0.78rem;
+    border-radius: 999px;
+    background: rgba(255,61,152,0.1);
+    border: 1px solid rgba(255,61,152,0.18);
+    color: #ffd8ea;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin: 0 0 0.85rem;
+    font-size: clamp(2.5rem, 4.6vw, 4.7rem);
+    line-height: 0.96;
+    letter-spacing: -0.06em;
+    max-width: 18ch;
+  }
+
+  .hero-copy p {
+    max-width: 60ch;
+    margin: 0 0 1.1rem;
+    color: var(--muted);
+    font-size: 1.04rem;
+  }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.2rem; }
+  .btn {
+    border: 1px solid transparent;
+    border-radius: 14px;
+    min-height: 52px;
+    padding: 0.92rem 1.15rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 790;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); text-decoration: none; }
+  .btn-primary {
+    color: #1d0714;
+    background: linear-gradient(180deg, #ff82c2 0%, var(--pink) 100%);
+    box-shadow: 0 14px 30px rgba(255,61,152,0.32), inset 0 1px 0 rgba(255,255,255,0.35);
+  }
+  .btn-secondary {
+    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,103,180,0.2);
+    color: var(--text);
+  }
+
+  .mini-note { margin-top: 0.85rem; color: var(--soft); font-size: 0.92rem; }
+
+  .hero-panel {
+    padding: 1.5rem;
+    display: grid;
+    align-items: center;
+    background:
+      radial-gradient(circle at 75% 18%, rgba(255,61,152,0.18), transparent 28%),
+      linear-gradient(155deg, rgba(18, 7, 16, 0.94), rgba(3, 3, 6, 0.995));
+  }
+
+  .neon-box {
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 1.35rem;
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .neon-head { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.95rem; }
+  .neon-head svg { width: 112px; height: 112px; flex: 0 0 auto; color: var(--pink-2); filter: drop-shadow(0 0 18px rgba(255,61,152,0.52)); }
+  .neon-line {
+    font-size: clamp(1.45rem, 2.8vw, 2.65rem);
+    font-weight: 820;
+    line-height: 1.03;
+    letter-spacing: -0.05em;
+    color: #ffe7f2;
+    text-shadow: 0 0 14px rgba(255,61,152,0.35);
+  }
+  .neon-box p { margin: 0; color: var(--muted); font-size: 1rem; }
+
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin: 1rem 0 1.8rem;
+  }
+
+  .quick-links a {
+    padding: 1rem 1rem 0.95rem;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.005));
+    color: var(--text);
+    display: block;
+  }
+  .quick-links a:hover { text-decoration: none; background: linear-gradient(180deg, rgba(255,61,152,0.08), rgba(255,255,255,0.01)); }
+  .quick-links strong { display: block; margin-bottom: 0.2rem; font-size: 0.98rem; }
+  .quick-links span { color: var(--muted); font-size: 0.9rem; }
+
+  .section-title {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--pink-2);
+    font-weight: 820;
+  }
+
+  .studies { display: grid; gap: 1rem; margin-bottom: 1.75rem; }
+
+  .study {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+  }
+
+  .study-side {
+    padding: 1.25rem 1.15rem;
+    border-right: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.004));
+  }
+
+  .study-num {
+    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+    color: #220713; background: linear-gradient(180deg, #ff88c6, var(--pink));
+    font-weight: 900; margin-bottom: 0.8rem; box-shadow: 0 0 16px rgba(255,61,152,0.22);
+  }
+  .study-side h3 { margin: 0 0 0.35rem; font-size: 1.45rem; line-height: 1.03; letter-spacing: -0.04em; }
+  .study-side p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+  .study-main { padding: 1.2rem 1.25rem 1.15rem; }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.65rem;
+  }
+  .pill {
+    display: inline-flex; align-items: center; padding: 0.3rem 0.56rem; border-radius: 999px;
+    font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 820;
+    color: #ffdbea; background: rgba(255,61,152,0.08); border: 1px solid rgba(255,61,152,0.15);
+  }
+
+  .paper { margin: 0 0 0.2rem; font-size: 1rem; font-weight: 760; color: #fff5fa; }
+  .cite { margin: 0 0 0.9rem; color: var(--soft); font-size: 0.89rem; }
+
+  .study-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.95rem;
+    margin-bottom: 0.85rem;
+  }
+  .study-grid h4,
+  .why h4 {
+    margin: 0 0 0.28rem;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pink-2);
+  }
+  .study-grid p,
+  .why p { margin: 0; color: var(--muted); font-size: 0.96rem; }
+
+  .why {
+    padding: 0.85rem 0.92rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: linear-gradient(180deg, rgba(255,61,152,0.045), rgba(255,255,255,0.01));
+    margin-bottom: 0.8rem;
+  }
+
+  .linkrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .linkrow p { margin: 0; color: var(--soft); font-size: 0.9rem; }
+  .explore {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.82rem 0.95rem; border-radius: 14px;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,91,173,0.18); color: #fff4fb;
+    font-weight: 780;
+  }
+  .explore:hover { text-decoration: none; background: rgba(255,61,152,0.08); }
+.print-band {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.2rem 1.3rem;
+    margin-bottom: 1.6rem;
+    background: linear-gradient(145deg, rgba(17, 6, 14, 0.97), rgba(4, 4, 7, 0.99));
+  }
+  .print-band h2 { margin: 0 0 0.2rem; font-size: 1.22rem; }
+  .print-band p { margin: 0; color: var(--muted); }
+
+  .closing {
+    padding: 1.3rem 1.35rem;
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    gap: 1rem;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(15, 5, 12, 0.97), rgba(3, 3, 6, 0.99));
+  }
+  .closing svg { width: 60px; height: 60px; color: var(--pink-2); filter: drop-shadow(0 0 12px rgba(255,61,152,0.34)); }
+  .closing p { margin: 0 0 0.25rem; font-size: 1.18rem; line-height: 1.35; }
+  .closing span { display: block; color: var(--muted); }
+
+  footer {
+    padding: 2rem 0 2.8rem;
+    text-align: center;
+    color: var(--soft);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 980px) {
+    .hero, .study { grid-template-columns: 1fr; }
+    .study-side { border-right: 0; border-bottom: 1px solid var(--line); }
+    .quick-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 780px) {
+    .nav { padding: 0.95rem 0; align-items: flex-start; }
+    .navlinks { display: none; }
+    .study-grid, .print-band { grid-template-columns: 1fr; }
+    .closing { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 620px) {
+    .wrap { width: min(calc(100% - 1rem), var(--max)); }
+    .hero-copy, .hero-panel, .study-side, .study-main, .print-band, .closing { padding-left: 1rem; padding-right: 1rem; }
+    .quick-links { grid-template-columns: 1fr; }
+    h1 { font-size: 2.25rem; }
+    .brand-name { font-size: 1.6rem; }
+    .brand-sub { font-size: 0.69rem; }
+    .neon-head svg { width: 84px; height: 84px; }
+    .neon-line { font-size: 1.7rem; }
+  }
+
+  @media print {
+    body { background: white; color: black; }
+    header, main, footer { display: none !important; }
+  }
+
+
+  /* Fail-safe science arrival: without JS, the page is fully visible. */
+  body.science-entry header,
+  body.science-entry main,
+  body.science-entry footer {
+    animation: science-content-arrive 720ms cubic-bezier(.2,.75,.25,1) both;
+  }
+
+  @keyframes science-content-arrive {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+      filter: blur(2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body.science-entry header,
+    body.science-entry main,
+    body.science-entry footer {
+      animation: none;
+    }
+  }
+
+
+  /* Brain in the header doubles as the quiet route home. */
+  .brain-home-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 160ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  .brain-home-link:hover,
+  .brain-home-link:focus-visible {
+    text-decoration: none;
+    transform: translateY(-1px) scale(1.035);
+    border-color: rgba(255,103,180,0.48);
+    box-shadow:
+      0 0 28px rgba(255,61,152,0.22),
+      inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+  .brain-home-link:focus-visible {
+    outline: 2px solid rgba(255,103,180,0.75);
+    outline-offset: 4px;
+  }
+
+  .try-reset {
+    margin: 1.45rem 0 0;
+    min-height: 260px;
+    display: grid;
+    grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+    align-items: stretch;
+    padding: 0;
+    border: 1px solid rgba(255,91,173,0.24);
+    border-radius: var(--radius);
+    background:
+      radial-gradient(circle at 76% 18%, rgba(255,61,152,0.13), transparent 30%),
+      linear-gradient(145deg, rgba(10,4,11,0.99), rgba(2,2,5,0.995));
+    box-shadow:
+      0 24px 60px rgba(0,0,0,0.48),
+      0 0 34px rgba(255,61,152,0.055);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .try-reset::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--pink), var(--pink-2), var(--pink), transparent);
+    opacity: 0.95;
+  }
+
+  .try-reset-art {
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 72% 23%, rgba(255,174,213,0.17), transparent 18%),
+      radial-gradient(circle at 50% 82%, rgba(103,61,138,0.22), transparent 47%),
+      linear-gradient(155deg, #100817, #05040a 68%, #120715);
+    border-right: 1px solid rgba(255,255,255,0.055);
+  }
+
+  .try-reset-art::before,
+  .try-reset-art::after {
+    content: "";
+    position: absolute;
+    inset: auto -8% -25% -8%;
+    height: 65%;
+    background:
+      radial-gradient(ellipse at center, rgba(62,32,75,0.68), rgba(7,4,10,0.92) 64%, transparent 67%);
+    filter: blur(1px);
+  }
+
+  .try-reset-art::after {
+    inset: auto 10% -13% 10%;
+    height: 40%;
+    opacity: 0.6;
+    filter: blur(8px);
+  }
+
+  .try-reset-moon {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 40% 38%, #ffeaf6 0 20%, #ff9dcc 40%, rgba(255,61,152,0.26) 69%, transparent 71%);
+    box-shadow:
+      0 0 28px rgba(255,103,180,0.36),
+      0 0 72px rgba(255,61,152,0.17);
+    opacity: 0.88;
+  }
+
+  .try-reset-art img {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: -135px;
+    width: min(360px, 92%);
+    height: auto;
+    transform: translateX(-50%);
+    filter:
+      brightness(0.70)
+      saturate(0.78)
+      drop-shadow(0 0 20px rgba(255,61,152,0.22));
+    opacity: 0.88;
+  }
+
+  .try-reset-quote {
+    position: absolute;
+    z-index: 4;
+    left: 1.15rem;
+    top: 1.15rem;
+    width: 12.5ch;
+    margin: 0;
+    color: #ffb4d7;
+    font-size: 1rem;
+    line-height: 1.25;
+    font-style: italic;
+    transform: rotate(-7deg);
+    text-shadow: 0 0 14px rgba(255,61,152,0.25);
+  }
+
+  .try-reset-copy {
+    position: relative;
+    z-index: 2;
+    align-self: center;
+    padding: 1.7rem 1.8rem 1.65rem;
+    text-align: left;
+  }
+
+  .try-reset-kicker {
+    margin: 0 0 0.38rem;
+    color: #e9d8e6;
+    font-size: 0.68rem;
+    font-weight: 820;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+
+  .try-reset h2 {
+    margin: 0 0 0.46rem;
+    color: #fff0f8;
+    font-size: clamp(1.65rem, 3.4vw, 2.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+  }
+
+  .try-reset-copy > p:not(.try-reset-kicker) {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.48;
+  }
+
+  .try-reset-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 48px;
+    padding: 0.78rem 1.15rem;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #ff88c8 0%, var(--pink) 100%);
+    color: #220713;
+    font-weight: 880;
+    text-transform: uppercase;
+    letter-spacing: 0.035em;
+    box-shadow:
+      0 12px 28px rgba(255,61,152,0.30),
+      inset 0 1px 0 rgba(255,255,255,0.35);
+    transition: transform 160ms ease, box-shadow 180ms ease;
+  }
+
+  .try-reset-link:hover,
+  .try-reset-link:focus-visible {
+    color: #220713;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow:
+      0 15px 32px rgba(255,61,152,0.37),
+      inset 0 1px 0 rgba(255,255,255,0.38);
+  }
+
+  .footer-home-link {
+    display: inline-block;
+    margin-top: 0.7rem;
+    color: #ffd8eb;
+    font-weight: 760;
+  }
+
+  @media (max-width: 760px) {
+    .try-reset {
+      grid-template-columns: 1fr;
+    }
+
+    .try-reset-art {
+      min-height: 220px;
+      border-right: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.055);
+    }
+
+    .try-reset-art img {
+      width: min(330px, 88vw);
+      bottom: -145px;
+    }
+
+    .try-reset-copy {
+      padding: 1.35rem 1.2rem 1.4rem;
+    }
+  }
+
+
+  /* Wonderland study characters — generated original artwork */
+  .study {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .study-side {
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    padding: 1.05rem 1rem 1.2rem;
+  }
+
+  .study-side::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    left: -72px;
+    bottom: -105px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,61,152,0.12), transparent 68%);
+    pointer-events: none;
+  }
+
+  .study-character {
+    position: relative;
+    z-index: 1;
+    width: 290px;
+    max-width: 100%;
+    margin: 0.35rem auto 0.2rem;
+    display: grid;
+    justify-items: center;
+  }
+
+  .study-character::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 13% 5% 7%;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle,
+        rgba(255,103,180,0.18) 0,
+        rgba(255,61,152,0.08) 38%,
+        transparent 70%);
+    filter: blur(10px);
+  }
+
+  .study-character img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter:
+      drop-shadow(0 13px 17px rgba(0,0,0,0.38))
+      drop-shadow(0 0 13px rgba(255,61,152,0.13));
+    transition: transform 220ms ease, filter 220ms ease;
+  }
+
+  .study:hover .study-character img {
+    transform: translateY(-3px) scale(1.012);
+    filter:
+      drop-shadow(0 15px 20px rgba(0,0,0,0.44))
+      drop-shadow(0 0 18px rgba(255,61,152,0.18));
+  }
+
+  .study-character figcaption {
+    margin-top: -0.1rem;
+    color: #ff91c7;
+    font-size: 0.68rem;
+    line-height: 1;
+    font-weight: 860;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 980px) {
+    .study {
+      grid-template-columns: 1fr;
+    }
+
+    .study-character {
+      width: min(285px, 72vw);
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .study-character {
+      width: min(250px, 82vw);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+  .study-side .study-character {
+    width: 270px;
+    max-width: 100%;
+    margin: 0.35rem 0 0.15rem;
+  }
+
+  .study-side h3 + p {
+    margin-bottom: 0.35rem;
+  }
+
+  .study-character figcaption {
+    display: none;
+  }
+
+  /* Each room gets a slightly different dream tint. */
+  #s1 .study-side {
+    background:
+      radial-gradient(circle at 52% 22%, rgba(255,82,160,0.10), transparent 34%),
+      linear-gradient(180deg, rgba(14,6,15,0.72), rgba(255,255,255,0.004));
+  }
+
+  #s2 .study-side {
+    background:
+      radial-gradient(circle at 48% 22%, rgba(202,89,255,0.10), transparent 34%),
+      linear-gradient(180deg, rgba(12,7,18,0.76), rgba(255,255,255,0.004));
+  }
+
+  #s3 .study-side {
+    background:
+      radial-gradient(circle at 54% 20%, rgba(255,61,152,0.11), transparent 35%),
+      linear-gradient(180deg, rgba(13,5,14,0.76), rgba(255,255,255,0.004));
+  }
+
+  #s4 .study-side {
+    background:
+      radial-gradient(circle at 50% 24%, rgba(127,108,255,0.11), transparent 36%),
+      linear-gradient(180deg, rgba(8,7,19,0.79), rgba(255,255,255,0.004));
+  }
+
+  #s1 .study-num,
+  #s2 .study-num,
+  #s3 .study-num,
+  #s4 .study-num {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    padding: 0.27rem 0.5rem;
+    border-radius: 999px;
+    margin-bottom: 0.45rem;
+    color: #ffd9ec;
+    background: rgba(255,61,152,0.09);
+    border: 1px solid rgba(255,103,180,0.20);
+    box-shadow: none;
+    font-size: 0.69rem;
+    letter-spacing: 0.07em;
+  }
+
+  /* Fixed dream/daydream flashback transition home. */
+  .dream-return {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483646;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    background: #fff7fc;
+  }
+
+  .dream-return.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .dream-return-glow,
+  .dream-return-ripple,
+  .dream-return-lines,
+  .dream-return-copy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+
+  .dream-return-glow {
+    width: 145vmax;
+    height: 145vmax;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.06);
+    background:
+      radial-gradient(circle,
+        #ffffff 0 15%,
+        #ffe7f3 24%,
+        rgba(255,103,180,0.90) 38%,
+        rgba(255,61,152,0.52) 49%,
+        rgba(19,7,17,0.94) 66%,
+        #010103 78%);
+    filter: blur(4px);
+    opacity: 0;
+  }
+
+  .dream-return.is-active .dream-return-glow {
+    animation: dream-flashback-bloom 1.72s cubic-bezier(.18,.80,.23,1) both;
+  }
+
+  .dream-return-ripple {
+    width: 22vmin;
+    height: 13vmin;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.85);
+    box-shadow:
+      0 0 18px rgba(255,255,255,0.70),
+      0 0 38px rgba(255,61,152,0.42);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+
+  .dream-return-ripple.r2 { animation-delay: 120ms !important; }
+  .dream-return-ripple.r3 { animation-delay: 250ms !important; }
+
+  .dream-return.is-active .dream-return-ripple {
+    animation: dream-ripple 1.32s ease-out 140ms both;
+  }
+
+  .dream-return-lines {
+    inset: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        transparent 0 4px,
+        rgba(255,255,255,0.075) 4px 5px
+      );
+    mix-blend-mode: screen;
+  }
+
+  .dream-return.is-active .dream-return-lines {
+    animation: dream-tv-ghost 1.55s steps(8,end) both;
+  }
+
+  .dream-return-copy {
+    z-index: 4;
+    width: min(88vw, 640px);
+    transform: translate(-50%, -50%) scale(0.88);
+    text-align: center;
+    color: #35051d;
+    font-size: clamp(1.45rem, 4.5vw, 3rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-shadow:
+      0 0 8px rgba(255,255,255,0.95),
+      0 0 28px rgba(255,255,255,0.88);
+    opacity: 0;
+  }
+
+  .dream-return-copy span {
+    display: block;
+    margin-top: 0.7rem;
+    color: rgba(53,5,29,0.68);
+    font-size: 0.76rem;
+    line-height: 1.2;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .dream-return.is-active .dream-return-copy {
+    animation: dream-copy-return 1.48s ease 110ms both;
+  }
+
+  body.dream-leaving > header,
+  body.dream-leaving > main,
+  body.dream-leaving > footer {
+    transform-origin: 50% 44%;
+    animation: dream-page-recall 1.6s cubic-bezier(.18,.72,.22,1) both;
+  }
+
+  @keyframes dream-page-recall {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0) saturate(1) brightness(1);
+    }
+    32% {
+      opacity: 0.86;
+      transform: scale(1.018);
+      filter: blur(1px) saturate(1.2) brightness(1.12);
+    }
+    66% {
+      opacity: 0.40;
+      transform: scale(1.055);
+      filter: blur(4px) saturate(1.35) brightness(1.45);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.11);
+      filter: blur(11px) saturate(0.8) brightness(2.2);
+    }
+  }
+
+  @keyframes dream-flashback-bloom {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.035);
+      filter: blur(16px);
+    }
+    15% { opacity: 0.94; }
+    48% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.30);
+      filter: blur(7px);
+    }
+    76% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.73);
+      filter: blur(2px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes dream-ripple {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.28);
+    }
+    18% { opacity: 0.82; }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(8);
+    }
+  }
+
+  @keyframes dream-tv-ghost {
+    0%, 100% { opacity: 0; transform: translateX(0); }
+    12% { opacity: 0.26; transform: translateX(-7px); }
+    24% { opacity: 0.10; transform: translateX(6px); }
+    42% { opacity: 0.24; transform: translateX(-4px); }
+    61% { opacity: 0.08; transform: translateX(8px); }
+    78% { opacity: 0.18; transform: translateX(-3px); }
+  }
+
+  @keyframes dream-copy-return {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -42%) scale(0.82);
+      filter: blur(6px);
+    }
+    28% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      filter: blur(0);
+    }
+    68% {
+      opacity: 1;
+      transform: translate(-50%, -53%) scale(1.03);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -62%) scale(1.12);
+      filter: blur(4px);
+    }
+  }
+
+  @media (max-width: 980px) {
+    .wonderland-character {
+      width: 146px;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .wonderland-character {
+      width: 132px;
+      height: 124px;
+    }
+    .wonderland-character svg {
+      width: 112px;
+      height: 112px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body.dream-leaving > header,
+    body.dream-leaving > main,
+    body.dream-leaving > footer {
+      animation: none;
+      opacity: 0.12;
+    }
+
+    .dream-return.is-active .dream-return-glow,
+    .dream-return.is-active .dream-return-ripple,
+    .dream-return.is-active .dream-return-lines,
+    .dream-return.is-active .dream-return-copy {
+      animation: none;
+    }
+
+    .dream-return.is-active .dream-return-glow {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.1);
+      filter: none;
+    }
+
+    .dream-return.is-active .dream-return-copy {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+
+    .dream-return-ripple,
+    .dream-return-lines {
+      display: none;
+    }
+  }
+
+
+
+/* APPROVED ADHD NIGHTLY RESET SCIENCE LOGO */
+.brand-logo-link {
+  display: inline-flex;
+  width: min(300px, 39vw);
+  min-width: 190px;
+  align-items: center;
+  text-decoration: none;
+}
+.brand-logo-link:hover { text-decoration: none; }
+.brand-logo-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 11px rgba(60,242,255,.12))
+          drop-shadow(0 0 14px rgba(255,60,247,.13));
+}
+@media (max-width: 780px) {
+  .brand-logo-link { width: 220px; min-width: 0; }
+}
+@media (max-width: 560px) {
+  .brand-logo-link { width: 185px; }
+}
+
+
+/* DISCREET LEGAL LINKS */
+.legal-links{
+  margin-top:.7rem;
+  font-size:.78rem;
+  line-height:1.6;
+  opacity:.64;
+}
+.legal-links a{
+  color:inherit;
+  text-decoration:none;
+}
+.legal-links a:hover{
+  color:#3CF2FF;
+  text-decoration:underline;
+}
+.legal-sep{
+  padding:0 .45rem;
+  opacity:.58;
+}
+</style>
+<link href="favicon.png" rel="icon" type="image/png"/></head>
+<body>
+<script>
+  document.body.classList.add('science-entry');
+</script>
+<svg aria-hidden="true" height="0" style="position:absolute;overflow:hidden" width="0">
+<defs>
+<symbol id="icon-brain" viewbox="0 0 48 48">
+<path d="M23.7 10.1c-1.7-3.8-7-4.8-10.2-1.8-4.2-.4-7.4 3.4-6.3 7.4-3.5 1.7-4.5 6.5-1.7 9.3-2.1 3.4-.1 8.2 4 9.1.2 4.1 4.5 6.6 8.2 4.5 1.3 2 3.4 3 6 2.6V10.1Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.35"></path>
+<path d="M24.3 10.1c1.7-3.8 7-4.8 10.2-1.8 4.2-.4 7.4 3.4 6.3 7.4 3.5 1.7 4.5 6.5 1.7 9.3 2.1 3.4.1 8.2-4 9.1-.2 4.1-4.5 6.6-8.2 4.5-1.3 2-3.4 3-6 2.6V10.1Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.35"></path>
+<path d="M24 9.5v31.2M12.5 14.6c3.2-.4 5.7 1 7.1 3.8M9.7 22.4c3.4-1.4 7.2-.4 9.1 2.3M13.4 31.3c2.5.4 4.5 1.8 5.4 4M35.5 14.6c-3.2-.4-5.7 1-7.1 3.8M38.3 22.4c-3.4-1.4-7.2-.4-9.1 2.3M34.6 31.3c-2.5.4-4.5 1.8-5.4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path>
+<path d="M16.4 11.6c-.4 2.3.4 4.2 2.4 5.7M11.2 27.1c2.5-.2 4.5.6 5.9 2.4M31.6 11.6c.4 2.3-.4 4.2-2.4 5.7M36.8 27.1c-2.5-.2-4.5.6-5.9 2.4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.55"></path>
+</symbol>
+<symbol id="icon-moon" viewbox="0 0 32 32">
+<path d="M20.8 5.3A11.2 11.2 0 1 0 26.7 23 9.9 9.9 0 0 1 20.8 5.3Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="m23.8 8.4.8 1.8 1.9.8-1.9.8-.8 1.9-.8-1.9-1.9-.8 1.9-.8ZM25.5 16.3l.5 1.1 1.1.5-1.1.5-.5 1.1-.5-1.1-1.1-.5 1.1-.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"></path>
+</symbol>
+</defs>
+</svg>
+<header>
+<div class="wrap nav">
+<div class="brand"><a aria-label="Back to ADHD Nightly Reset" class="brand-logo-link brain-home-link" href="index.html"><img alt="ADHD Nightly Reset" src="assets/brand/adhd-nightly-reset-logo.png"/></a></div>
+<div class="nav-actions">
+<nav aria-label="Page sections" class="navlinks">
+<a href="#studies">Studies</a>
+<button class="nav-print" onclick="printTemplate()" type="button">Print protocol</button>
+<a class="dream-home-link" href="index.html">Back to Home</a>
+</nav>
+<div aria-label="Language" class="science-language-toggle" role="group">
+<button aria-pressed="true" data-lang="en" type="button">EN</button>
+<button aria-pressed="false" data-lang="es" type="button">ES</button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<div class="wrap">
+<section aria-labelledby="title" class="hero">
+<div class="hero-copy">
+<div class="eyebrow">Level 2 · The science</div>
+<h1 id="title">Why your mind keeps working after the day is supposed to be over.</h1>
+<p>
+          Across four different experiments, scientists kept finding the same thing: the brain doesn’t switch off just because you want it to. This page is a guided tour through four research stories that explain a single puzzle: why your mind keeps working after the day is supposed to be over. Each study shows a different way unfinished goals, future intentions, external reminders and recent experience can stay active as you move toward sleep.
+        </p>
+<p>
+          The question behind all four studies is simple: why does the mind keep holding on when the room is quiet and the day is meant to be finished?
+        </p>
+<div class="actions">
+<button class="btn btn-primary" onclick="printTemplate()" type="button">Print the one-page protocol</button>
+<a class="btn btn-secondary" href="#studies">Jump to the studies</a>
+</div>
+<div class="mini-note">Print opens a clean worksheet only — not this science page.</div>
+</div>
+<div class="hero-panel">
+<div class="neon-box">
+<div class="neon-head">
+<svg aria-hidden="true"><use href="#icon-brain"></use></svg>
+<div class="neon-line">Unfinished intentions can stay mentally active after the day ends.</div>
+</div>
+<p>
+            These studies ask simple questions with big consequences: why unfinished goals stay active, why lists calm the mind, when “writing it down” changes memory, and how recent experience can replay as you cross into sleep.
+          </p>
+</div>
+</div>
+</section>
+<div aria-label="Study previews" class="quick-links">
+<a href="#s1">
+<strong>Unfinished tasks</strong>
+<span>How a simple plan can quiet goals that refuse to switch off. A plan can quiet a goal more effectively than finishing it.</span>
+</a>
+<a href="#s2">
+<strong>Bedtime lists</strong>
+<span>The five-minute writing experiment that changed sleep onset. Specificity changed sleep onset in a controlled lab.</span>
+</a>
+<a href="#s3">
+<strong>Cognitive offloading</strong>
+<span>When your notebook becomes part of your memory system. The brain treats reminders as part of itself.</span>
+</a>
+<a href="#s4">
+<strong>Tetris dreams</strong>
+<span>What happens when a game keeps replaying at the edge of sleep. Even amnesic patients replayed the game.</span>
+</a>
+</div>
+<h2 class="section-title" id="studies">Four research stories worth exploring</h2>
+<section class="studies">
+<!-- Study 1 -->
+<article class="study" id="s1">
+<div class="study-side">
+<div class="study-num">1</div>
+<h3>Unfinished tasks</h3>
+<p>Why do incomplete things stay mentally alive?</p>
+<figure class="study-character">
+<img alt="An original Victorian-inspired white rabbit carrying a pocket watch and a checklist." decoding="async" height="1000" loading="lazy" src="assets/white-rabbit.webp" width="1000"/>
+</figure>
+</div>
+<div class="study-main">
+<div class="meta">
+<span class="pill">Classic question</span>
+<span class="pill">Modern twist</span>
+</div>
+<p class="paper">
+            Masicampo &amp; Baumeister (2011) — <em>Consider it done! Plan making can eliminate the cognitive effects of unfulfilled goals.</em>
+</p>
+<p class="cite">
+            A modern test of an old psychological idea: unfinished goals can remain unusually active in the mind. A useful real-world companion is Syrek et al. (2017), who followed unfinished work, rumination and weekend sleep.
+          </p>
+<div class="study-grid">
+<div>
+<h4>What researchers actually tested</h4>
+<p>
+                You close the laptop, but part of your mind keeps the job open. Masicampo and Baumeister activated goals people couldn’t complete and found those intentions intruding into unrelated tasks.
+              </p>
+<p>
+                They found goal-related thoughts appearing during an unrelated reading task, goal words becoming unusually accessible, and poorer performance on an unrelated anagram task. Unfinished intentions were leaking into places they didn’t belong.
+              </p>
+</div>
+<div>
+<h4>The result that changes the story</h4>
+<p>
+                Once people made a specific plan, those interference effects disappeared. The mind wasn’t demanding completion — it was protecting an intention until it had a future slot.
+              </p>
+<p>
+                The interference didn’t stop because the task was done — it stopped because the brain finally trusted the plan.
+              </p>
+</div>
+</div>
+<div class="why">
+<h4>Then researchers took the question into real life</h4>
+<p>
+              Syrek and colleagues followed 59 employees for 12 weeks. More unfinished work predicted more weekend rumination and poorer sleep.
+            </p>
+<p>
+              That does not prove that every unfinished thought causes bad sleep, or that making a bedtime note automatically fixes it. But it connects an old laboratory puzzle to something recognisable: sometimes the working day ends while part of the mind is still treating the work as active.
+            </p>
+<p>
+<strong>Tonight:</strong> giving unfinished work a specific slot on tomorrow’s list tells the brain, “this has somewhere to live; you don’t need to keep it active.”
+            </p>
+</div>
+<div class="linkrow">
+<p><strong>Best route:</strong> start with the 2011 planning experiments, then read the 2017 diary study for the sleep connection.</p>
+<a class="explore" href="https://pubmed.ncbi.nlm.nih.gov/21688924/" rel="noopener" target="_blank">Explore the 2011 study →</a>
+</div>
+</div>
+</article>
+<!-- Study 2 -->
+<article class="study" id="s2">
+<div class="study-side">
+<div class="study-num">2</div>
+<h3>Bedtime lists</h3>
+<p>Can writing tomorrow down affect sleep tonight?</p>
+<figure class="study-character">
+<img alt="An original Victorian-inspired hatter writing tomorrow’s list beside a teacup." decoding="async" height="1000" loading="lazy" src="assets/hatter.webp" width="1000"/>
+</figure>
+</div>
+<div class="study-main">
+<div class="meta">
+<span class="pill">Direct bedtime study</span>
+<span class="pill">Sleep lab</span>
+</div>
+<p class="paper">
+            Scullin et al. (2018) — <em>The effects of bedtime writing on difficulty falling asleep: A polysomnographic study comparing to-do lists and completed activity lists.</em>
+</p>
+<p class="cite">
+            Fifty-seven healthy adults aged 18–30 spent five minutes writing immediately before an overnight sleep-lab recording.
+          </p>
+<div class="study-grid">
+<div>
+<h4>The experiment is beautifully simple</h4>
+<p>
+                Participants wrote either future tasks or recently completed tasks for five minutes before sleep. Sleep onset was measured with polysomnography — the laboratory recording of brain activity, eye movements and other physiological signals used to identify sleep.
+              </p>
+</div>
+<div>
+<h4>What happened</h4>
+<p>
+                The future-focused group fell asleep faster, and more specific lists predicted faster sleep onset. The pattern is hard to ignore: the more specific the future intention, the faster people fell asleep.
+              </p>
+<p>
+                The brain seems to relax once tomorrow is mapped clearly enough that it no longer needs to protect the intention.
+              </p>
+</div>
+</div>
+<div class="why">
+<h4>The interesting question is not whether lists are magical</h4>
+<p>
+              A precise future intention becomes easier to leave alone once it exists outside the mind. The list doesn’t complete tomorrow’s tasks — it changes the remembering problem.
+            </p>
+<p>
+              There are important limits. This was a small, single-night study of healthy young adults, not an ADHD trial and not a test of Nightly Reset as a whole. It tells us something intriguing about five minutes of bedtime writing — not that every kind of journaling, planning or note-taking will improve sleep.
+            </p>
+<p>
+<strong>Tonight:</strong> a short, specific list of tomorrow’s non-negotiable tasks may be doing more than organising your day — it may be changing how much remembering your brain needs to do at sleep onset.
+            </p>
+</div>
+<div class="linkrow">
+<p><strong>If you read only one bedtime paper on this page, make it this one.</strong> The design is easy to understand and the question is unusually close to real life.</p>
+<a class="explore" href="https://pubmed.ncbi.nlm.nih.gov/29058942/" rel="noopener" target="_blank">Explore the sleep-lab study →</a>
+</div>
+</div>
+</article>
+<!-- Study 3 -->
+<article class="study" id="s3">
+<div class="study-side">
+<div class="study-num">3</div>
+<h3>Cognitive offloading</h3>
+<p>When does a reminder become part of the memory system?</p>
+<figure class="study-character">
+<img alt="An original grinning Wonderland-inspired cat surrounded by floating reminders." decoding="async" height="1000" loading="lazy" src="assets/cheshire-cat.webp" width="1000"/>
+</figure>
+</div>
+<div class="study-main">
+<div class="meta">
+<span class="pill">Prospective memory</span>
+<span class="pill">External reminders</span>
+</div>
+<p class="paper">
+            Gilbert (2015) — <em>Strategic offloading of delayed intentions into the external environment.</em>
+</p>
+<p class="cite">
+            Four online experiments with 1,196 participants asked a deceptively everyday question: when do people choose to stop relying on memory alone and create a reminder instead?
+          </p>
+<div class="study-grid">
+<div>
+<h4>Prospective memory is memory for later</h4>
+<p>
+                Prospective memory is remembering to act at the right future moment. Gilbert’s participants could keep delayed intentions in their heads or set reminders. People offloaded more when juggling multiple intentions or facing distraction.
+              </p>
+</div>
+<div>
+<h4>We seem to know when remembering is getting expensive</h4>
+<p>
+                Later work sharpened the picture: longer delays and higher working‑memory load increased offloading. Metacognition — our sense of how difficult remembering will be — guided the decision.
+              </p>
+</div>
+</div>
+<div class="why">
+<h4>But offloading has a fascinating catch</h4>
+<p>
+              A 2026 study found reminders improved performance while available but reduced later memory once removed. External systems temporarily became part of the memory architecture.
+            </p>
+<p>
+              This is why “writing it down” is more interesting than it sounds. A notebook, diary, phone alert or scrap of paper can temporarily become part of the functional memory system — and when it does, internal memory may no longer need to do exactly the same job.
+            </p>
+<p>
+              Offloading doesn’t just help you remember — it changes how much remembering the brain decides to do.
+            </p>
+<p>
+<strong>Tonight:</strong> when you write things down during Nightly Reset, you’re not just making notes; you’re changing how your memory system is configured for the night.
+            </p>
+</div>
+<div class="linkrow">
+<p><strong>Best route:</strong> Gilbert (2015) for the core idea; Tsai &amp; Gilbert (2025) for time-based reminders; Fellers &amp; Storm (2026) for the trade-off.</p>
+<a class="explore" href="https://pubmed.ncbi.nlm.nih.gov/25404057/" rel="noopener" target="_blank">Explore cognitive offloading →</a>
+</div>
+</div>
+</article>
+<!-- Study 4 -->
+<article class="study" id="s4">
+<div class="study-side">
+<div class="study-num">4</div>
+<h3>Tetris dreams</h3>
+<p>Can a computer game keep running after you stop?</p>
+<figure class="study-character">
+<img alt="An original caterpillar on a glowing mushroom holding a generic game controller beside an old television showing abstract geometric shapes." decoding="async" height="1000" loading="lazy" src="assets/caterpillar-gamer.webp" width="1000"/>
+</figure>
+</div>
+<div class="study-main">
+<div class="meta">
+<span class="pill">Science detour</span>
+<span class="pill">Dream carryover</span>
+</div>
+<p class="paper">
+            Stickgold et al. (2000) — <em>Replaying the game: hypnagogic images in normals and amnesics.</em> Then Wamsley et al. (2010) and Wamsley &amp; Stickgold (2019) on virtual-maze dreams and later memory performance.
+          </p>
+<p class="cite">
+            This is where the science stops feeling like a productivity study and starts feeling genuinely strange.
+          </p>
+<div class="study-grid">
+<div>
+<h4>First: the Tetris experiment</h4>
+<p>
+                After extended Tetris play, participants reported visual fragments of the game as they drifted into sleep. Amnesic patients produced similar imagery despite lacking conscious recall.
+              </p>
+<p>
+                The brain replayed the game even when the conscious memory of playing it was gone. Older versions of the game could also feed into the imagery, suggesting that recent and remote material can mix.
+              </p>
+</div>
+<div>
+<h4>Then came the virtual maze</h4>
+<p>
+                In a virtual maze study, dream incorporation predicted better retest performance. Thinking about the maze while awake did not.
+              </p>
+<p>
+                An overnight replication found maze-related imagery across different sleep phases, again linked with better next‑morning performance.
+              </p>
+</div>
+</div>
+<div class="why">
+<h4>The rewarding idea is not “dream about it and you will learn it”</h4>
+<p>
+              The researchers themselves were careful about that. Dreaming about the task may be a visible side-effect of deeper memory reactivation and consolidation rather than the cause of better memory. The dream is potentially a window onto processing that is already happening.
+            </p>
+<p>
+              Sleep does not look like a clean deletion of waking experience. Recent material can persist, reappear, combine with older memories and return in forms that are recognisable but transformed. The border between “awake” and “asleep” is much more cognitively interesting than a simple off switch.
+            </p>
+<p>
+<strong>Tonight:</strong> a busy bedtime mind may sometimes be the visible edge of deeper processing, not just “overthinking.”
+            </p>
+</div>
+<div class="linkrow">
+<p><strong>Best route:</strong> Tetris first for the surprise; the 2010 maze paper next for the connection between dream content and memory processing.</p>
+<a class="explore" href="https://pubmed.ncbi.nlm.nih.gov/11030656/" rel="noopener" target="_blank">Explore the Tetris study →</a>
+</div>
+</div>
+</article>
+</section>
+<section class="why" id="big-picture-summary">
+<h4>The big picture</h4>
+<p>Across all four studies, the same architecture keeps appearing:</p>
+<ul>
+<li><strong>Goal protection:</strong> unfinished intentions stay active until the brain trusts a future plan.</li>
+<li><strong>Sleep-onset remembering:</strong> specific future tasks reduce cognitive activation at bedtime.</li>
+<li><strong>Externalised memory:</strong> reminders and notes temporarily become part of the memory system.</li>
+<li><strong>Sleep replay:</strong> recent experience can resurface at the edge of sleep during consolidation.</li>
+</ul>
+<p>All four studies point to the same truth: the mind keeps working until it trusts that its unfinished business is safe. Nightly Reset works with these mechanisms, not against them.</p>
+</section>
+<section class="print-band" id="print">
+<div>
+<h2>Want the practical page for tonight?</h2>
+<p>
+          Print a clean one-page Nightly Reset worksheet with only the writing template: no extra science, no clutter, just the routine.
+        </p>
+</div>
+<button class="btn btn-primary" onclick="printTemplate()" type="button">Print the one-page protocol</button>
+</section>
+<section class="closing">
+<svg aria-hidden="true"><use href="#icon-moon"></use></svg>
+<div>
+<p>The science gets better when it is not trying to prove too much.</p>
+<span>
+          These studies do not explain everything about sleep, but they show that unfinished goals, external memory and recent experience can stay active longer than we realise. Nightly Reset doesn’t quiet the mind by force — it gives the mind a place to put things so it can quiet itself. Nightly Reset gives those processes somewhere safe to put things — so the mind doesn’t have to keep holding them while you’re trying to rest.
+        </span>
+</div>
+</section>
+<section aria-label="Try ADHD Nightly Reset" class="try-reset">
+<div aria-hidden="true" class="try-reset-art">
+<div class="try-reset-moon"></div>
+<img alt="" decoding="async" height="1000" loading="lazy" src="assets/white-rabbit.webp" width="1000"/>
+<p class="try-reset-quote">The real magic happens when you put it into practice.</p>
+</div>
+<div class="try-reset-copy">
+<p class="try-reset-kicker">Back to reality</p>
+<h2>Give ADHD Nightly Reset a try.</h2>
+<p>The science is interesting.<br/>The useful bit takes about five minutes tonight.</p>
+<a class="try-reset-link dream-home-link" href="index.html">Take me to ADHD Nightly Reset <span aria-hidden="true">→</span></a>
+</div>
+</section>
+</div>
+</main>
+<footer>
+<div class="wrap">Nightly Reset · Science page v7.3 · compressed, high-salience study stories · refined dark neon layout.<br/><a class="footer-home-link dream-home-link" href="index.html">← Back to ADHD Nightly Reset</a><div class="legal-links"><a href="privacy/">Privacy</a><span class="legal-sep">·</span><a href="terms/">Terms</a><span class="legal-sep">·</span><a href="mailto:contact@riffsystems.org">Contact</a></div></div>
+</footer>
+<script>
+  function printTemplate() {
+    const w = window.open('', '_blank', 'width=900,height=1100');
+    if (!w) return;
+    w.document.open();
+    w.document.write(`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nightly Reset — One-Page Protocol</title>
+<style>
+  :root { --ink:#111; --pink:#ff3d98; --line:#666; --bg:#fff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink); }
+  .sheet { width:min(900px, 100%); margin:0 auto; padding:28px 26px 34px; }
+  h1 { margin:0 0 6px; font-size:31px; line-height:1.05; }
+  .sub { margin:0 0 18px; color:#444; font-size:16px; }
+  .topnote { display:flex; align-items:center; gap:12px; border:2px solid #111; border-radius:18px; padding:13px 15px; margin-bottom:18px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .box { border:2px solid #111; border-radius:18px; padding:14px 15px; min-height:210px; }
+  .box h2 { margin:0 0 5px; font-size:22px; }
+  .box p { margin:0 0 8px; font-size:14px; color:#444; }
+  .rule { border-bottom:1px solid #888; margin:12px 0 0; height:28px; }
+  .small { min-height:180px; }
+  .permission { margin-top:14px; border:2px solid #111; border-radius:18px; padding:16px; }
+  .permission h2 { margin:0 0 6px; font-size:22px; }
+  .permission .quote { margin:10px 0 10px; font-size:21px; font-weight:700; }
+  .sign { border-bottom:1px solid #888; height:34px; }
+  .footer { margin-top:18px; font-size:13px; color:#444; }
+  @media print { .sheet { padding:20px 18px 24px; } }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <h1>Nightly Reset</h1>
+    <p class="sub">One page. About five minutes. Print it, keep it, use it every night.</p>
+    <div class="topnote"><div><strong>Tonight’s aim:</strong> put the day, tomorrow’s tasks, and loose thoughts somewhere outside your head.</div></div>
+    <div class="grid">
+      <section class="box">
+        <h2>1 · Day Summary</h2>
+        <p>Write 2–3 brief bullet points describing what happened today. Events only.</p>
+        <div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div>
+      </section>
+      <section class="box">
+        <h2>2 · Tomorrow’s List</h2>
+        <p>List the top 1–3 non-negotiable tasks for tomorrow. Not a full to-do list.</p>
+        <div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div>
+      </section>
+      <section class="box small">
+        <h2>3 · Everything Else</h2>
+        <p>Dump worries, ideas, reminders and loose fragments in single words or short phrases.</p>
+        <div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div><div class="rule"></div>
+      </section>
+      <section class="box small">
+        <h2>4 · Permission Statement</h2>
+        <p>Write or say this slowly:</p>
+        <div class="quote">“This is stored. I don’t need to hold it.”</div>
+        <p>Repeat once if needed.</p>
+        <div class="sign"></div>
+      </section>
+    </div>
+    <section class="permission">
+      <h2>One reminder</h2>
+      <p>You do not have to do this perfectly. If you only manage part of it tonight, that still counts.</p>
+    </section>
+    <div class="footer">Nightly Reset worksheet · no extra science, just the page you need to use the routine.</div>
+  </div>
+</body>
+</html>`);
+    w.document.close();
+    w.focus();
+    setTimeout(() => w.print(), 250);
+  }
+</script>
+<script>
+(() => {
+  const translations = {"Nightly Reset": "Reinicio Nocturno", "A five-minute routine for ADHD minds": "Una rutina de cinco minutos para mentes con TDAH", "Studies": "Estudios", "Print protocol": "Imprimir protocolo", "Back to Home": "Volver al inicio", "Level 2 · The science": "Nivel 2 · La ciencia", "Why your mind keeps working after the day is supposed to be over.": "Por qué tu mente sigue trabajando cuando se supone que el día ya ha terminado.", "Across four different experiments, scientists kept finding the same thing: the brain doesn’t switch off just because you want it to. This page is a guided tour through four research stories that explain a single puzzle: why your mind keeps working after the day is supposed to be over. Each study shows a different way unfinished goals, future intentions, external reminders and recent experience can stay active as you move toward sleep.": "En cuatro experimentos diferentes, los científicos siguieron encontrando lo mismo: el cerebro no se apaga simplemente porque tú quieras. Esta página es un recorrido por cuatro historias de investigación que explican un único enigma: por qué tu mente sigue trabajando cuando se supone que el día ya ha terminado. Cada estudio muestra una forma distinta en que los objetivos inacabados, las intenciones futuras, los recordatorios externos y las experiencias recientes pueden seguir activos mientras te acercas al sueño.", "The question behind all four studies is simple: why does the mind keep holding on when the room is quiet and the day is meant to be finished?": "La pregunta detrás de los cuatro estudios es sencilla: ¿por qué la mente sigue aferrándose a las cosas cuando la habitación está en silencio y se supone que el día ha terminado?", "Print the one-page protocol": "Imprimir el protocolo de una página", "Jump to the studies": "Ir a los estudios", "Print opens a clean worksheet only — not this science page.": "La impresión abre solo una hoja limpia de trabajo, no esta página de ciencia.", "Unfinished intentions can stay mentally active after the day ends.": "Las intenciones inacabadas pueden seguir mentalmente activas después de que termine el día.", "These studies ask simple questions with big consequences: why unfinished goals stay active, why lists calm the mind, when “writing it down” changes memory, and how recent experience can replay as you cross into sleep.": "Estos estudios plantean preguntas sencillas con consecuencias importantes: por qué los objetivos inacabados siguen activos, por qué las listas pueden calmar la mente, cuándo «anotarlo» cambia la memoria y cómo una experiencia reciente puede reaparecer al entrar en el sueño.", "Unfinished tasks": "Tareas inacabadas", "How a simple plan can quiet goals that refuse to switch off. A plan can quiet a goal more effectively than finishing it.": "Cómo un plan sencillo puede aquietar objetivos que se niegan a apagarse. Un plan puede reducir su actividad mental incluso antes de terminarlos.", "Bedtime lists": "Listas antes de dormir", "The five-minute writing experiment that changed sleep onset. Specificity changed sleep onset in a controlled lab.": "El experimento de escritura de cinco minutos que cambió el inicio del sueño. La especificidad marcó una diferencia en un laboratorio controlado.", "Cognitive offloading": "Descarga cognitiva", "When your notebook becomes part of your memory system. The brain treats reminders as part of itself.": "Cuando tu cuaderno pasa a formar parte del sistema que hace el trabajo de recordar.", "Tetris dreams": "Sueños de Tetris", "What happens when a game keeps replaying at the edge of sleep. Even amnesic patients replayed the game.": "Qué ocurre cuando un juego sigue reapareciendo en el límite del sueño. Incluso pacientes con amnesia mostraron imágenes del juego.", "Four research stories worth exploring": "Cuatro historias de investigación que merece la pena explorar", "Why do incomplete things stay mentally alive?": "¿Por qué las cosas incompletas siguen mentalmente vivas?", "Classic question": "Pregunta clásica", "Modern twist": "Giro moderno", "A modern test of an old psychological idea: unfinished goals can remain unusually active in the mind. A useful real-world companion is Syrek et al. (2017), who followed unfinished work, rumination and weekend sleep.": "Una prueba moderna de una vieja idea psicológica: los objetivos inacabados pueden permanecer inusualmente activos en la mente. Un complemento útil del mundo real es Syrek et al. (2017), que siguieron el trabajo inacabado, la rumiación y el sueño durante el fin de semana.", "What researchers actually tested": "Lo que realmente probaron los investigadores", "You close the laptop, but part of your mind keeps the job open. Masicampo and Baumeister activated goals people couldn’t complete and found those intentions intruding into unrelated tasks.": "Cierras el portátil, pero una parte de tu mente mantiene el trabajo abierto. Masicampo y Baumeister activaron objetivos que las personas no podían completar y encontraron que esas intenciones se colaban en tareas no relacionadas.", "They found goal-related thoughts appearing during an unrelated reading task, goal words becoming unusually accessible, and poorer performance on an unrelated anagram task. Unfinished intentions were leaking into places they didn’t belong.": "Encontraron pensamientos relacionados con el objetivo durante una tarea de lectura no relacionada, palabras vinculadas al objetivo que se volvían inusualmente accesibles y peor rendimiento en una tarea de anagramas. Las intenciones inacabadas se estaban filtrando donde no correspondían.", "The result that changes the story": "El resultado que cambia la historia", "Once people made a specific plan, those interference effects disappeared. The mind wasn’t demanding completion — it was protecting an intention until it had a future slot.": "Cuando las personas hicieron un plan específico, esos efectos de interferencia desaparecieron. La mente no exigía terminar la tarea: estaba protegiendo una intención hasta que tuviera un lugar futuro.", "The interference didn’t stop because the task was done — it stopped because the brain finally trusted the plan.": "La interferencia no se detuvo porque la tarea estuviera terminada, sino porque el plan le dio a la intención un lugar concreto.", "Then researchers took the question into real life": "Después, los investigadores llevaron la pregunta a la vida real", "Syrek and colleagues followed 59 employees for 12 weeks. More unfinished work predicted more weekend rumination and poorer sleep.": "Syrek y sus colegas siguieron a 59 empleados durante 12 semanas. Más trabajo inacabado predijo más rumiación durante el fin de semana y peor sueño.", "That does not prove that every unfinished thought causes bad sleep, or that making a bedtime note automatically fixes it. But it connects an old laboratory puzzle to something recognisable: sometimes the working day ends while part of the mind is still treating the work as active.": "Eso no demuestra que cada pensamiento inacabado cause mal sueño ni que escribir una nota antes de acostarse lo arregle automáticamente. Pero conecta un viejo enigma de laboratorio con algo reconocible: a veces la jornada laboral termina mientras una parte de la mente sigue tratando el trabajo como activo.", "Tonight:": "Esta noche:", "giving unfinished work a specific slot on tomorrow’s list tells the brain, “this has somewhere to live; you don’t need to keep it active.”": "dar al trabajo inacabado un lugar específico en la lista de mañana puede darle a esa intención un sitio donde quedarse, en vez de depender solo de mantenerla mentalmente activa.", "Best route:": "Mejor recorrido:", "start with the 2011 planning experiments, then read the 2017 diary study for the sleep connection.": "empieza por los experimentos de planificación de 2011 y después lee el estudio diario de 2017 para ver la conexión con el sueño.", "Explore the 2011 study →": "Explorar el estudio de 2011 →", "Can writing tomorrow down affect sleep tonight?": "¿Puede escribir el mañana influir en el sueño de esta noche?", "Direct bedtime study": "Estudio directo a la hora de dormir", "Sleep lab": "Laboratorio del sueño", "Fifty-seven healthy adults aged 18–30 spent five minutes writing immediately before an overnight sleep-lab recording.": "Cincuenta y siete adultos sanos de 18 a 30 años dedicaron cinco minutos a escribir justo antes de un registro nocturno en un laboratorio del sueño.", "The experiment is beautifully simple": "El experimento es maravillosamente sencillo", "Participants wrote either future tasks or recently completed tasks for five minutes before sleep. Sleep onset was measured with polysomnography — the laboratory recording of brain activity, eye movements and other physiological signals used to identify sleep.": "Los participantes escribieron durante cinco minutos sobre tareas futuras o tareas realizadas recientemente antes de dormir. El inicio del sueño se midió con polisomnografía: el registro de laboratorio de la actividad cerebral, los movimientos oculares y otras señales fisiológicas utilizadas para identificar el sueño.", "What happened": "Qué ocurrió", "The future-focused group fell asleep faster, and more specific lists predicted faster sleep onset. The pattern is hard to ignore: the more specific the future intention, the faster people fell asleep.": "El grupo centrado en el futuro se durmió más rápido y las listas más específicas predijeron un inicio del sueño más rápido. El patrón llama la atención: cuanto más específica era la intención futura, antes se dormían las personas.", "The brain seems to relax once tomorrow is mapped clearly enough that it no longer needs to protect the intention.": "Una posible interpretación es que concretar el mañana reduce la necesidad de seguir manteniendo activamente la intención.", "The interesting question is not whether lists are magical": "La pregunta interesante no es si las listas son mágicas", "A precise future intention becomes easier to leave alone once it exists outside the mind. The list doesn’t complete tomorrow’s tasks — it changes the remembering problem.": "Una intención futura precisa puede resultar más fácil de dejar en paz una vez que existe fuera de la mente. La lista no completa las tareas de mañana: cambia el problema de tener que recordarlas.", "There are important limits. This was a small, single-night study of healthy young adults, not an ADHD trial and not a test of Nightly Reset as a whole. It tells us something intriguing about five minutes of bedtime writing — not that every kind of journaling, planning or note-taking will improve sleep.": "Hay límites importantes. Fue un estudio pequeño, de una sola noche, con adultos jóvenes sanos; no fue un ensayo sobre TDAH ni una prueba de Nightly Reset en su conjunto. Nos dice algo intrigante sobre cinco minutos de escritura antes de dormir, no que cualquier tipo de diario, planificación o toma de notas vaya a mejorar el sueño.", "a short, specific list of tomorrow’s non-negotiable tasks may be doing more than organising your day — it may be changing how much remembering your brain needs to do at sleep onset.": "una lista breve y específica de las tareas no negociables de mañana puede estar haciendo algo más que organizar el día: puede cambiar cuánto necesitas mantener activamente en mente al quedarte dormido.", "If you read only one bedtime paper on this page, make it this one.": "Si solo lees un artículo sobre la hora de dormir en esta página, que sea este.", "The design is easy to understand and the question is unusually close to real life.": "El diseño es fácil de entender y la pregunta está inusualmente cerca de la vida real.", "Explore the sleep-lab study →": "Explorar el estudio del laboratorio del sueño →", "When does a reminder become part of the memory system?": "¿Cuándo pasa un recordatorio a formar parte del sistema de memoria?", "Prospective memory": "Memoria prospectiva", "External reminders": "Recordatorios externos", "Four online experiments with 1,196 participants asked a deceptively everyday question: when do people choose to stop relying on memory alone and create a reminder instead?": "Cuatro experimentos en línea con 1.196 participantes plantearon una pregunta engañosamente cotidiana: ¿cuándo decide la gente dejar de confiar solo en la memoria y crear un recordatorio?", "Prospective memory is memory for later": "La memoria prospectiva es recordar para más tarde", "Prospective memory is remembering to act at the right future moment. Gilbert’s participants could keep delayed intentions in their heads or set reminders. People offloaded more when juggling multiple intentions or facing distraction.": "La memoria prospectiva consiste en recordar actuar en el momento futuro adecuado. Los participantes de Gilbert podían mantener intenciones aplazadas en la cabeza o establecer recordatorios. Las personas descargaban más cuando manejaban varias intenciones o afrontaban distracciones.", "We seem to know when remembering is getting expensive": "Parece que sabemos cuándo recordar empieza a resultar costoso", "Later work sharpened the picture: longer delays and higher working‑memory load increased offloading. Metacognition — our sense of how difficult remembering will be — guided the decision.": "Trabajos posteriores afinaron la imagen: los retrasos más largos y una mayor carga de memoria de trabajo aumentaron la descarga. La metacognición —nuestra percepción de lo difícil que será recordar— guio la decisión.", "But offloading has a fascinating catch": "Pero la descarga tiene una contrapartida fascinante", "A 2026 study found reminders improved performance while available but reduced later memory once removed. External systems temporarily became part of the memory architecture.": "Un estudio de 2026 encontró que los recordatorios mejoraban el rendimiento mientras estaban disponibles, pero la memoria posterior empeoraba una vez retirados. Los sistemas externos estaban asumiendo temporalmente parte del trabajo de recordar.", "This is why “writing it down” is more interesting than it sounds. A notebook, diary, phone alert or scrap of paper can temporarily become part of the functional memory system — and when it does, internal memory may no longer need to do exactly the same job.": "Por eso «anotarlo» es más interesante de lo que parece. Un cuaderno, una agenda, una alerta del teléfono o un trozo de papel pueden convertirse temporalmente en parte del sistema funcional de memoria; cuando eso ocurre, la memoria interna puede dejar de hacer exactamente el mismo trabajo.", "Offloading doesn’t just help you remember — it changes how much remembering the brain decides to do.": "La descarga no solo ayuda a recordar: cambia cuánto trabajo de recuerdo queda dentro de la mente.", "when you write things down during Nightly Reset, you’re not just making notes; you’re changing how your memory system is configured for the night.": "cuando escribes cosas durante Nightly Reset, no solo estás tomando notas; estás cambiando qué parte del trabajo de recordar queda fuera de tu cabeza durante la noche.", "Gilbert (2015) for the core idea; Tsai & Gilbert (2025) for time-based reminders; Fellers & Storm (2026) for the trade-off.": "Gilbert (2015) para la idea central; Tsai y Gilbert (2025) para los recordatorios basados en el tiempo; Fellers y Storm (2026) para la contrapartida.", "Explore cognitive offloading →": "Explorar la descarga cognitiva →", "Can a computer game keep running after you stop?": "¿Puede un videojuego seguir funcionando después de que tú pares?", "Science detour": "Desvío científico", "Dream carryover": "Arrastre hacia los sueños", "Then Wamsley et al. (2010) and Wamsley & Stickgold (2019) on virtual-maze dreams and later memory performance.": "Después, Wamsley et al. (2010) y Wamsley y Stickgold (2019) estudiaron los sueños sobre un laberinto virtual y el rendimiento posterior de la memoria.", "This is where the science stops feeling like a productivity study and starts feeling genuinely strange.": "Aquí es donde la ciencia deja de parecer un estudio de productividad y empieza a sentirse genuinamente extraña.", "First: the Tetris experiment": "Primero: el experimento con Tetris", "After extended Tetris play, participants reported visual fragments of the game as they drifted into sleep. Amnesic patients produced similar imagery despite lacking conscious recall.": "Después de jugar a Tetris durante un periodo prolongado, los participantes informaron de fragmentos visuales del juego mientras se quedaban dormidos. Los pacientes con amnesia produjeron imágenes similares a pesar de no tener recuerdo consciente.", "The brain replayed the game even when the conscious memory of playing it was gone. Older versions of the game could also feed into the imagery, suggesting that recent and remote material can mix.": "El juego reaparecía incluso cuando el recuerdo consciente de haber jugado ya no estaba disponible. Versiones anteriores del juego también podían alimentar las imágenes, lo que sugiere que material reciente y remoto puede mezclarse.", "Then came the virtual maze": "Después llegó el laberinto virtual", "In a virtual maze study, dream incorporation predicted better retest performance. Thinking about the maze while awake did not.": "En un estudio con un laberinto virtual, la incorporación del laberinto a los sueños predijo un mejor rendimiento posterior. Pensar en el laberinto estando despierto no mostró la misma asociación.", "An overnight replication found maze-related imagery across different sleep phases, again linked with better next‑morning performance.": "Una réplica durante la noche encontró imágenes relacionadas con el laberinto en distintas fases del sueño, de nuevo asociadas con un mejor rendimiento a la mañana siguiente.", "The rewarding idea is not “dream about it and you will learn it”": "La idea interesante no es «sueña con ello y lo aprenderás»", "The researchers themselves were careful about that. Dreaming about the task may be a visible side-effect of deeper memory reactivation and consolidation rather than the cause of better memory. The dream is potentially a window onto processing that is already happening.": "Los propios investigadores fueron cuidadosos con esto. Soñar con la tarea puede ser un efecto visible de una reactivación y consolidación de memoria más profundas, en lugar de la causa de una mejor memoria. El sueño podría ser una ventana a un procesamiento que ya está ocurriendo.", "Sleep does not look like a clean deletion of waking experience. Recent material can persist, reappear, combine with older memories and return in forms that are recognisable but transformed. The border between “awake” and “asleep” is much more cognitively interesting than a simple off switch.": "El sueño no parece un borrado limpio de la experiencia de vigilia. El material reciente puede persistir, reaparecer, combinarse con recuerdos antiguos y volver en formas reconocibles pero transformadas. La frontera entre «despierto» y «dormido» es cognitivamente mucho más interesante que un simple interruptor.", "a busy bedtime mind may sometimes be the visible edge of deeper processing, not just “overthinking.”": "una mente muy activa a la hora de dormir puede ser a veces el borde visible de un procesamiento más profundo, no solo «darle demasiadas vueltas».", "Tetris first for the surprise; the 2010 maze paper next for the connection between dream content and memory processing.": "Tetris primero por la sorpresa; después, el artículo del laberinto de 2010 para la conexión entre el contenido de los sueños y el procesamiento de la memoria.", "Explore the Tetris study →": "Explorar el estudio de Tetris →", "The big picture": "La visión general", "Across all four studies, the same architecture keeps appearing:": "En los cuatro estudios aparece una arquitectura parecida:", "Goal protection:": "Protección de objetivos:", "unfinished intentions stay active until the brain trusts a future plan.": "las intenciones inacabadas pueden seguir activas hasta que existe un plan futuro suficientemente concreto.", "Sleep-onset remembering:": "Recuerdo al inicio del sueño:", "specific future tasks reduce cognitive activation at bedtime.": "las tareas futuras específicas pueden reducir parte de la activación cognitiva a la hora de dormir.", "Externalised memory:": "Memoria externalizada:", "reminders and notes temporarily become part of the memory system.": "los recordatorios y las notas pueden asumir temporalmente parte del trabajo de la memoria.", "Sleep replay:": "Reaparición durante el sueño:", "recent experience can resurface at the edge of sleep during consolidation.": "la experiencia reciente puede reaparecer en el límite del sueño durante la consolidación.", "All four studies point to the same truth: the mind keeps working until it trusts that its unfinished business is safe. Nightly Reset works with these mechanisms, not against them.": "En conjunto, estos estudios sugieren que las intenciones inacabadas, los recordatorios externos y la experiencia reciente pueden seguir activas de formas distintas. Nightly Reset está diseñado alrededor de esas ideas; el protocolo completo no ha sido probado directamente por estos estudios.", "Want the practical page for tonight?": "¿Quieres la página práctica para esta noche?", "Print a clean one-page Nightly Reset worksheet with only the writing template: no extra science, no clutter, just the routine.": "Imprime una hoja limpia de una página de Nightly Reset con solo la plantilla de escritura: sin ciencia extra, sin ruido, solo la rutina.", "The science gets better when it is not trying to prove too much.": "La ciencia mejora cuando no intenta demostrar demasiado.", "These studies do not explain everything about sleep, but they show that unfinished goals, external memory and recent experience can stay active longer than we realise. Nightly Reset doesn’t quiet the mind by force — it gives the mind a place to put things so it can quiet itself. Nightly Reset gives those processes somewhere safe to put things — so the mind doesn’t have to keep holding them while you’re trying to rest.": "Estos estudios no explican todo sobre el sueño, pero muestran que los objetivos inacabados, la memoria externa y la experiencia reciente pueden seguir activos más tiempo de lo que imaginamos. Nightly Reset no intenta silenciar la mente por la fuerza: le da un lugar donde dejar cosas para que no tenga que seguir sosteniéndolas mientras intentas descansar.", "The real magic happens when you put it into practice.": "La verdadera magia aparece cuando lo llevas a la práctica.", "Back to reality": "De vuelta a la realidad", "Give ADHD Nightly Reset a try.": "Prueba ADHD Nightly Reset.", "The science is interesting.": "La ciencia es interesante.", "The useful bit takes about five minutes tonight.": "La parte útil tarda unos cinco minutos esta noche.", "Take me to ADHD Nightly Reset": "Llévame a ADHD Nightly Reset", "← Back to ADHD Nightly Reset": "← Volver a ADHD Nightly Reset", "Back to tonight…": "De vuelta a esta noche…", "the dream fades · the reset returns": "el sueño se desvanece · vuelve el reinicio"};
+
+  const normalize = value => (value || '').replace(/\s+/g, ' ').trim();
+  const textNodes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      const parent = node.parentElement;
+      if (!parent || ['SCRIPT','STYLE'].includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
+      const key = normalize(node.nodeValue);
+      return translations[key] ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    }
+  });
+
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const raw = node.nodeValue;
+    const key = normalize(raw);
+    textNodes.push({
+      node,
+      en: raw,
+      es: raw.replace(key, translations[key])
+    });
+  }
+
+  const buttons = [...document.querySelectorAll('.science-language-toggle button')];
+  const homeLinks = [...document.querySelectorAll('a.brain-home-link, a.dream-home-link')];
+
+  function crossPageHref(baseHref, lang) {
+    const url = new URL(baseHref, window.location.href);
+    if (lang === 'es') url.searchParams.set('lang', 'es');
+    else url.searchParams.delete('lang');
+    return url.pathname.split('/').pop() + url.search + url.hash;
+  }
+
+  homeLinks.forEach(link => {
+    if (!link.dataset.baseHref) link.dataset.baseHref = link.getAttribute('href');
+  });
+
+  function setLanguage(lang) {
+    const es = lang === 'es';
+    textNodes.forEach(item => item.node.nodeValue = es ? item.es : item.en);
+    document.documentElement.lang = es ? 'es' : 'en';
+    document.title = es ? 'Nightly Reset — La ciencia' : 'Nightly Reset — The Science';
+
+    const brainLink = document.querySelector('.brain-home-link');
+    if (brainLink) brainLink.setAttribute('aria-label', es ? 'Volver a ADHD Nightly Reset' : 'Back to ADHD Nightly Reset');
+
+    buttons.forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
+
+    homeLinks.forEach(link => {
+      link.setAttribute('href', crossPageHref(link.dataset.baseHref, lang));
+    });
+
+    const current = new URL(window.location.href);
+    if (es) current.searchParams.set('lang', 'es');
+    else current.searchParams.delete('lang');
+    history.replaceState(null, '', current.href);
+
+    window.currentScienceLang = lang;
+  }
+
+  buttons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
+
+  const initial = new URLSearchParams(window.location.search).get('lang') === 'es' ? 'es' : 'en';
+  setLanguage(initial);
+})();
+</script>
+<div aria-hidden="true" class="dream-return" id="dream-return">
+<div class="dream-return-glow"></div>
+<div class="dream-return-ripple r1"></div>
+<div class="dream-return-ripple r2"></div>
+<div class="dream-return-ripple r3"></div>
+<div class="dream-return-lines"></div>
+<div class="dream-return-copy">
+    Back to tonight…
+    <span>the dream fades · the reset returns</span>
+</div>
+</div>
+<script>
+(function () {
+  const overlay = document.getElementById('dream-return');
+  const links = document.querySelectorAll('a.brain-home-link, a.dream-home-link');
+
+  if (!overlay || !links.length) return;
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
+      ) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      const destination = link.href;
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      document.body.classList.add('dream-leaving');
+      overlay.classList.add('is-active');
+
+      window.setTimeout(function () {
+        window.location.href = destination;
+      }, reduced ? 420 : 1750);
+    });
+  });
+})();
+</script>
+</body>
+</html>
